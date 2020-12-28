@@ -1,0 +1,586 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* global */
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.container::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.text-primary {
+    color: #11815f;
+}
+
+.text-white {
+    color: white;
+}
+
+
+/* header */
+
+.header {
+    width: 100%;
+    background-color: rgb(206, 200, 200);
+}
+
+.header .logo {
+    float: left;
+    padding: 15px 0;
+}
+
+.header .logo a {
+    color: #666;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.header .menu {
+    float: right
+}
+
+.header .menu li {
+    float: left;
+}
+
+.header .menu li a {
+    color: #666;
+    font-size: 15px;
+    padding: 20px 15px;
+    display: block;
+}
+
+.header .menu li a:hover,
+.selected-page {
+    color: rgba(242, 92, 34) !important;
+}
+
+
+/* main Home*/
+
+
+/* banner */
+
+main {
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./../img/about-us-banner.png') no-repeat center center;
+    box-sizing: cover;
+}
+
+.hero .header-content {
+    text-align: center;
+    padding: 200px;
+}
+
+.hero .header-content h1 {
+    font-size: 50px;
+}
+
+.hero .header-content p {
+    margin: 30px 0;
+    line-height: 25px;
+}
+
+.hero .header-content .header-content-link {
+    color: white;
+    padding: 10px 20px;
+    background-color: #11815f;
+    border-radius: 4px;
+}
+
+.hero .header-content a:hover {
+    background-color: #0d684d;
+}
+
+
+/* history */
+
+.history {
+    width: 100%;
+    height: 400px;
+    float: left;
+}
+
+.history .history-image {
+    width: 50%;
+    height: 100%;
+    background: url('./../img/history-picture.jpg') no-repeat center bottom;
+    float: left;
+    display: block;
+}
+
+.history .history-content {
+    width: 50%;
+    float: right;
+    padding: 70px 30px;
+    text-align: center;
+}
+
+.history .history-content h3 {
+    margin-bottom: 30px;
+}
+
+.history .history-content h3 span {
+    color: #11815f;
+}
+
+.history .history-content p {
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+
+.history .history-content .history-content-link {
+    color: white;
+    padding: 10px 20px;
+    background-color: #11815f;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.history .history-content .history-content-link:hover {
+    background-color: #0d684d;
+}
+
+
+/* galler iamge */
+
+.gallery-image {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.gallery-image .triangle {
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom-color: rgb(206, 200, 200);
+    position: absolute;
+    bottom: 0;
+    left: 66.70%;
+    transform: translate(-50%);
+    z-index: 10;
+}
+
+.gallery-image .triangle2 {
+    left: 33.33%;
+}
+
+.gallery-image .image-container {
+    float: left;
+    width: 33.33333%;
+    height: 300px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-image .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.gallery-image .image-container:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-image .image-container .glass {
+    background-color: rgba(13, 104, 77, 0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.gallery-image .image-container:hover .glass {
+    transform: rotate(90deg) scaleX(0);
+}
+
+
+/* main contact */
+
+.contact-us {
+    width: 100%;
+    float: left;
+}
+
+.contact-us .contact-us-content {
+    width: 100%;
+    float: left;
+    padding: 30px 0;
+}
+
+.contact-us .contact-us-content h3 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.contact-us .contact-us-content p {
+    margin-bottom: 30px;
+}
+
+.contact-us .contact-us-content .contact-us-form {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.contact-us .contact-us-content .group-item {
+    width: 100%;
+}
+
+.contact-us .contact-us-content .group-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.contact-us .contact-us-content .group-item label {
+    margin-bottom: 1px;
+    display: block;
+}
+
+.contact-us .contact-us-content .group-item input,
+.contact-us .contact-us-content .group-item textarea {
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+    color: gray;
+    caret-color: #11815f;
+}
+
+.contact-us .contact-us-content .group-item input::placeholder,
+.contact-us .contact-us-content .group-item textarea::placeholder {
+    color: #11815f;
+}
+
+.contact-us .contact-us-content .group-item textarea {
+    padding: 10px;
+    height: 150px;
+    resize: none;
+}
+
+.contact-us .contact-us-content .group-item .submit-input {
+    width: auto;
+    height: auto;
+    border: none;
+    background-color: #11815f;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 40px;
+}
+
+.contact-us .contact-us-content .group-item .submit-input:hover {
+    background-color: #0d684d;
+}
+
+.contact-us .contact-us-content .group-item textarea:focus,
+.contact-us .contact-us-content .group-item input:focus {
+    outline: 1px solid #11815f;
+}
+
+
+/* platform contact us */
+
+.our-location {
+    width: 100%;
+    float: left;
+    background-color: #333333;
+}
+
+.our-location .platform {
+    width: 33.33%;
+    height: 300px;
+    float: left;
+    text-align: center;
+    color: white;
+    padding: 100px;
+}
+
+.our-location .platform i {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.our-location .platform h3 {
+    margin-bottom: 10px;
+}
+
+.our-location .platform p {}
+
+
+/* about us */
+
+
+/* about us  text*/
+
+.about-us {
+    width: 100%;
+}
+
+.about-us .about-us-description {
+    width: 100%;
+    float: left;
+}
+
+.about-us .about-us-description .about-us-text {
+    width: 50%;
+    float: left;
+    padding: 30px 0;
+}
+
+.about-us .about-us-description .about-us-text h3 {
+    font-size: 25px;
+    float: left;
+}
+
+.about-us .about-us-description .about-us-text p {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+    float: left;
+}
+
+.about-us .about-us-description .about-us-text-picture {
+    width: 47%;
+    float: left;
+    padding: 50px;
+}
+
+.about-us .about-us-description img {
+    float: left;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* about us customers */
+
+.about-us .banner {
+    width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(./../img/about-us-banner.png) no-repeat center center;
+    background-size: cover;
+}
+
+.about-us .banner .banner-content {
+    text-align: center;
+    padding: 100px 0;
+    float: left;
+}
+
+.about-us .banner .banner-content h3 {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.about-us .banner .banner-content .comment-box {
+    margin-top: 50px;
+    float: left;
+    background-color: rgb(17, 129, 95, .8);
+    padding: 20px;
+}
+
+.about-us .banner .banner-content .comment-box .img-cart {
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+
+.about-us .banner .banner-content .comment-box .img-cart img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.about-us .banner .banner-content .comment-box p {
+    width: calc(100% - 70px);
+    /* width: calc(100% - 70px); */
+    float: left;
+    padding: 10px;
+    color: white;
+    padding-left: 30px;
+}
+
+
+/* footer */
+
+.footer {
+    clear: both;
+    width: 100%;
+    float: left;
+    padding: 10px 0;
+    height: 50px;
+    color: gray;
+    background-color: rgb(206, 200, 200);
+    text-align: center;
+    font-size: 15px;
+}
+
+@media(max-width:767px) {
+    .header .logo {
+        width: 100%;
+        text-align: center;
+    }
+    .history .history-image {
+        width: 100%;
+    }
+    .history .history-content {
+        width: 100%;
+    }
+    .triangle {
+        display: none;
+    }
+    .gallery-image .image-container {
+        width: 100%;
+    }
+    .gallery-image .image-container:nth-child(4) .glass {
+        background-color: rgba(13, 55, 104, 0.3);
+    }
+    .contact-us .contact-us-content p {
+        text-align: center;
+        padding: 0 40px;
+    }
+    .our-location .platform {
+        width: 100%;
+        padding: 100px 0;
+    }
+    .our-location .platform {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+    }
+    .contact-us .contact-us-content .group-item .submit-input {
+        width: 100%;
+    }
+    .about-us .about-us-description .about-us-text-picture {
+        width: 100%;
+    }
+    .about-us .about-us-description .about-us-text-picture .image-cart {
+        width: 85%;
+        height: 200px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    .about-us .banner {
+        width: 100%;
+        background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(./../img/about-us-banner.png) no-repeat 30% center;
+        background-size: cover;
+    }
+    .about-us .banner .banner-content .comment-box p {
+        width: 100%;
+        /* width: calc(100% - 70px); */
+        float: left;
+        padding: 10px;
+        color: white;
+        padding-left: 0px;
+    }
+    .about-us .about-us-description .about-us-text-picture {
+        width: 100%;
+        /* float: left; */
+    }
+    .about-us .about-us-description .about-us-text-picture .image-cart {
+        /* float: left; */
+        width: 100%;
+        height: 250px;
+        padding: 30px 15%;
+    }
+    .about-us .about-us-description .about-us-text-picture .image-cart img {
+        float: left;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+@media(min-width:768px) and (max-width:1023px) {
+    .our-location .platform {
+        padding: 100px 0;
+    }
+    .about-us .about-us-description .about-us-text-picture {
+        width: 100%;
+        /* float: left; */
+    }
+    .about-us .about-us-description .about-us-text-picture .image-cart {
+        /* float: left; */
+        width: 100%;
+        height: 300px;
+        padding: 30px 15%;
+    }
+    .about-us .about-us-description .about-us-text-picture .image-cart img {
+        float: left;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+@media(max-width:1023px) {
+    .header .menu {
+        width: 100%;
+    }
+    .header .menu li {
+        width: 100%;
+        text-align: center;
+        float: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+    }
+    .header .menu li:last-child {
+        border-bottom: none;
+    }
+    .hero {
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./../img/about-us-banner.png') no-repeat right center;
+        box-sizing: cover;
+    }
+    .hero .header-content {
+        text-align: center;
+        padding: 50px 5px;
+    }
+    .hero .header-content h1 {
+        font-size: 30px;
+    }
+    .contact-us .contact-us-content h3 {
+        font-size: 50px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .about-us .about-us-description .about-us-text {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 0px;
+    }
+}
